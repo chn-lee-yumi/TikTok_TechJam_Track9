@@ -21,7 +21,7 @@ python3 main.py
 #### Performance and Bias
 
 ```bash
-python3 evaliation.py
+python3 evaluation.py
 ```
 
 #### Explainability
