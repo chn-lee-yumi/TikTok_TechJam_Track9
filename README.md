@@ -12,7 +12,7 @@ We have 3 tasks:
 ### Train
 
 ```bash
-python3 process.py
+python3 preprocess.py
 python3 main.py
 ```
 
