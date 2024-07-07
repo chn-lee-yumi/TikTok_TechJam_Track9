@@ -109,8 +109,8 @@ with open('test_data.pkl', 'rb') as f:
     test_data = pickle.load(f)
 
 test_dataset = HateDataset(test_data)
-
-test_dataloader = DataLoader(test_dataset, batch_size=4, collate_fn=collate_fn)
+batch_size = 4
+test_dataloader = DataLoader(test_dataset, batch_size=batch_size, collate_fn=collate_fn)
 
 # Model initialization
 num_labels_task1 = len(labels)
@@ -127,9 +127,11 @@ for input_ids, attention_mask, label, target_group, rationales in test_dataloade
 
     logits_task1, logits_task2, probs_tagging = model(input_ids=input_ids.to(device), attention_mask=attention_mask.to(device))
 
-    print(tokenizer.batch_decode(input_ids.tolist()))
+    # print(tokenizer.batch_decode(input_ids.tolist()))
+    batch_tokens = [tokenizer.convert_ids_to_tokens(input_ids) for input_ids in input_ids.tolist()]
+    print(batch_tokens)
     print(logits_task1)
     print(logits_task2)
-    print(probs_tagging.view(3, 24))
+    print(probs_tagging.view(batch_size, -1))
 
     break
