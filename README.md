@@ -5,7 +5,11 @@ This is a repo for 2024 TikTok TechJam Track9.
 We have 3 tasks:
 - Task 1: Classification (normal, offensive, hatespeech)
 - Task 2: Classification (Race, Religion, Gender, Sexual Orientation, Miscellaneous, None)
-- Task 3: Tagging for each token
+- Task 3: Tagging for each token (Toxic, Non-toxic)
+
+**Report:** [2024 TikTok TechJam Track9 Report.pdf](2024%20TikTok%20TechJam%20Track9%20Report.pdf)
+
+**Demostration Video:** [Youtube]()
 
 ## Usage
 
