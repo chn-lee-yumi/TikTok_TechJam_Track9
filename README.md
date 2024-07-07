@@ -12,7 +12,7 @@ We have 3 tasks:
 ### Train
 
 ```bash
-python3 process.py
+python3 preprocess.py
 python3 main.py
 ```
 
@@ -21,7 +21,7 @@ python3 main.py
 #### Performance and Bias
 
 ```bash
-python3 evaliation.py
+python3 evaluation.py
 ```
 
 #### Explainability
